@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+
+  /* Colors */
+  --VeryDarkGray:hsl(0, 0%, 17%);
+  --DarkGray:hsl(0, 0%, 59%);
+
+  /* Typography */
+  --textinput:18px;
+
+}
+
+
+*{
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0;
+  height: 100%;
+
+
+}
+
+

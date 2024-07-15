@@ -1,0 +1,30 @@
+.input-container {
+  position: relative;
+  width: 300px;
+}
+
+.input-container .ip-input {
+  border-radius: 9px;
+  border: none;
+  height: 50px;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 75px;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+.input-container .btn-search {
+  background-color: black;
+  border: none;
+  background-image: url('../../../../../public/assets/images/icon-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 9px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
