@@ -1,13 +1,17 @@
+
 .input-container {
   position: relative;
-  width: 300px;
+  width: 100%; 
+  max-width: 400px; 
+  display: flex;
+  margin-top: 30px;
 }
 
 .input-container .ip-input {
   border-radius: 9px;
   border: none;
   height: 50px;
-  width: 100%;
+  width: calc(100% - 50px); 
   padding-left: 20px;
   padding-right: 75px;
   font-size: 18px;

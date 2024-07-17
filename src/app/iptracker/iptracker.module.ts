@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MainpageComponent } from './pages/mainpage.component';
 import { IpinputComponent } from './components/ipinput/ipinput.component';
+import { InfoComponent } from './components/info/info.component';
 
 
 
@@ -11,7 +12,9 @@ import { IpinputComponent } from './components/ipinput/ipinput.component';
   imports: [
     CommonModule,
     MainpageComponent,
-    IpinputComponent
+    IpinputComponent,
+    InfoComponent
+
   ]
 })
 export class IptrackerModule { }

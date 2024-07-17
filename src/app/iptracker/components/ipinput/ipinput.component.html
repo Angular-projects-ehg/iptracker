@@ -1,4 +1,9 @@
 <div class="input-container">
-  <input class="ip-input" type="text"/>
-  <button class="btn-search"></button>
+  <form (submit)="handleSubmit($event)">
+    <input [formControl]="ip" class="ip-input" type="text">
+    <button  type="submit" class="btn-search"></button>
+
+  </form>
 </div>
+
+
