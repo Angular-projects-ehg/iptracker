@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { IptrackerModule } from './iptracker/iptracker.module';
-import { ReactiveFormsModule,FormsModule } from '@angular/forms';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [],
-  imports: [ CommonModule,IptrackerModule,ReactiveFormsModule,FormsModule],
-  exports: [],
-  providers: [],
+  imports: [IptrackerModule],
+  providers: [provideHttpClient()],
 })
+
 
 
 export class Appodule {

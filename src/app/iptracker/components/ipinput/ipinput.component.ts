@@ -1,24 +1,35 @@
-import { Component } from '@angular/core';
-import { InfoComponent } from '../info/info.component';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { TrackIpService } from '../../services/trackip.service';
 
 @Component({
   selector: 'app-ipinput',
   standalone: true,
-  imports: [InfoComponent,ReactiveFormsModule],
+  imports: [],
   templateUrl: './ipinput.component.html',
   styleUrl: './ipinput.component.css'
 })
 
-export class IpinputComponent {
- ip = new FormControl('')
+export class IpInputComponent {
 
- handleSubmit(event: Event) {
-  event.preventDefault();
-  console.log(this.ip.value);
+
+@ViewChild('ipValueInput')
+public searchIp!: ElementRef<HTMLInputElement>;
+
+constructor(private trackIpService:TrackIpService) {}
+
+ FormSubmit(e:Event) {
+  e.preventDefault();
+  const IP = this.searchIp.nativeElement.value;
+
+  this.trackIpService.searchIp(IP);
+
+  console.log('Searching ip: ' + IP);
+
 }
 
- 
+
+
+
 }
 
 

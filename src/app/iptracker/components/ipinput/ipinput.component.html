@@ -1,7 +1,8 @@
 <div class="input-container">
-  <form (submit)="handleSubmit($event)">
-    <input [formControl]="ip" class="ip-input" type="text">
-    <button  type="submit" class="btn-search"></button>
+  <form (submit)="FormSubmit($event)">
+    <input class="ip-input" type="text" #ipValueInput>
+    <button  type="submit" class="btn-search"
+    ></button>
 
   </form>
 </div>
