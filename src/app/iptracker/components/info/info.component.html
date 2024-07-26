@@ -1,14 +1,14 @@
 <div class="ip-info">
-    <p class="ip-info-title">IP ADDRESS</p>
-    <span class="ip-info-data">data</span>
-
-    <p class="ip-info-title">LOCATION</p>
-    <span class="ip-info-data">data</span>
-
-    <p class="ip-info-title">TIME ZONE</p>
-    <span class="ip-info-data">data</span>
-
-    <p class="ip-info-title">ISP</p>
-    <span class="ip-info-data">data</span>
+    <h3 class="ip-info-title">IP ADDRESS</h3>
+    <span class="ip-info-data">{{ipdata.ip}}</span>
+  <hr>
+    <h3 class="ip-info-title">LOCATION</h3>
+    <span class="ip-info-data"> {{ipdata.location.region}}  -  {{ipdata.location.country}}</span>
+  <hr>
+    <h3 class="ip-info-title">TIME ZONE</h3>
+    <span class="ip-info-data">{{ipdata.location.timezone}}</span>
+  <hr>
+    <h3 class="ip-info-title">ISP</h3>
+    <span class="ip-info-data">{{ipdata.isp}}</span>
 
 </div>

@@ -1,10 +1,10 @@
 .ip-info {
     background-color: white;
-    color: var(--VeryDarkGray); 
+    color: var(--VeryDarkGray);
     border-radius: 20px;
     text-align: center;
     width: 350px;
-    min-height: 50px; 
-    padding: 10px; 
-    box-sizing: border-box; 
+    min-height: 50px;
+    padding: 15px;
+    box-sizing: border-box;
   }
