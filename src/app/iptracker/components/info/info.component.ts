@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-
+import '../../../../../node_modules/leaflet/dist/leaflet'
 
 @Component({
   selector: 'app-info',

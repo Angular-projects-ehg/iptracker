@@ -13,7 +13,7 @@ import { InfoComponent } from './components/info/info.component';
     CommonModule,
     MainpageComponent,
     IpInputComponent,
-    InfoComponent
+    InfoComponent,
 
   ]
 })
