@@ -46,10 +46,8 @@ export class TrackIpService {
 
 
     if (ip.length === 0) return;
-    if(this.map) {
-      this.map.off();
-      this.map.remove();
-    }
+    if(this.map) {this.map.off(); this.map.remove();}
+
 
     const params = new HttpParams()
       .set('apiKey', this.IP_API_KEY)
