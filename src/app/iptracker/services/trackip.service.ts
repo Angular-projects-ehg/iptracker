@@ -35,7 +35,6 @@ export class TrackIpService {
 
   private IP_API_KEY = 'at_6aRBZ1v2sjJN5tcd2gKi2pRNRFfWH';
   private API_URL: string = ' https://geo.ipify.org/api/v2/country,city'
-  // https://geo.ipify.org/api/v2/country?apiKey=at_6aRBZ1v2sjJN5tcd2gKi2pRNRFfWH&ipAddress=8.8.8.8
 
 
 
@@ -58,12 +57,12 @@ export class TrackIpService {
         this.ipData = resp
         this.map = L.map('map', {
           center: [ this.ipData.location.lat, this.ipData.location.lng ],
-          zoom: 3
+          zoom:13,
+
+
         });
 
         const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          maxZoom: 15,
-          minZoom: 13,
           attribution: '© OpenStreetMap'
         });
         this.map.addLayer(tiles)

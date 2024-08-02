@@ -1,32 +1,40 @@
-.ip-info {
-    background-color: white;
-    color: var(--VeryDarkGray);
-    border-radius: 20px;
-    text-align: center;
-    width: 350px;
-    min-height: 50px;
-    padding: 15px;
-    box-sizing: border-box;
-    border:1px solid lightgray;
-  }
+.ip-info-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: center;
+}
 
 
-  .map-container {
-    position: absolute;
-    top: 50;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin-top: 50px;
-    width: 100%;
-    height: 500px;
-  }
+.ip-info-container .ip-info {
+  background-color: white;
+  color: var(--VeryDarkGray);
+  width: 320px;
+  height: 280px;
+  border-radius: 13px;
+  border: 1px lightgray solid;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  z-index: 100;
 
-  .map-frame {
-    border: 2px solid black;
-    height: 100%;
-  }
 
-  #map {
-    height: 100%;
-  }
+}
+
+.ip-info-container .ip-info .ip-info-title {
+
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: rgb(87, 87, 87);
+
+}
+
+.ip-info-container .ip-info .ip-info-data {
+  font-size:16px;
+  font-weight: bold;
+}
+
+

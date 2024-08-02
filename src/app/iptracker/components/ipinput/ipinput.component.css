@@ -1,35 +1,37 @@
-
 .input-container {
-  position: relative;
-  width: 100%; 
-  max-width: 400px; 
+  width: 100%;
+}
+
+.input-container .form {
   display: flex;
-  margin-top: 30px;
+  justify-content: center;
 }
 
 .input-container .ip-input {
-  border-radius: 9px;
-  border: none;
-  height: 50px;
-  width: calc(100% - 50px); 
-  padding-left: 20px;
-  padding-right: 75px;
-  font-size: 18px;
-  box-sizing: border-box;
+  height: 45px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+
+  border:none;
+  width: 60%;
+  padding-left:22px;
+  font-size: 20px;
+  border-left: none;
+  outline: none;
 }
 
 .input-container .btn-search {
   background-color: black;
-  border: none;
   background-image: url('../../../../../public/assets/images/icon-arrow.svg');
+  height: 45.5px;
   background-repeat: no-repeat;
-  background-position: center;
-  height: 50px;
   width: 50px;
+  background-position: center;
   border-top-right-radius: 9px;
   border-bottom-right-radius: 9px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  cursor: pointer;
-}
+  border: none;
+
+
+ }
+
+
