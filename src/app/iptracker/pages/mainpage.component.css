@@ -8,10 +8,10 @@
 
 
 .background .container {
-text-align: center;
-display: flex;
-flex-direction: column;
-justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
 }
 
@@ -19,8 +19,8 @@ justify-content: center;
   margin: 0;
   color: white;
   margin-top: 20px;
-  margin-bottom:20px;
-  font-size:22px;
+  margin-bottom: 20px;
+  font-size: 22px;
   font-weight: bold;
 }
 
@@ -45,4 +45,12 @@ justify-content: center;
 
 
 
-
+/* desktop */
+@media (min-width: 768px) {
+  .background {
+    background-image: url("../../../../public/assets/images/pattern-bg-desktop.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+  }
+}
