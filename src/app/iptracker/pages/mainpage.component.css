@@ -1,5 +1,5 @@
 .background {
-  background-image: url("../../../../public/assets/images/pattern-bg-mobile.png");
+  background-image: url("../../../../public/assets/pattern-bg-mobile.png");
   background-repeat: no-repeat;
   width: 100%;
   background-size: cover;
@@ -61,7 +61,7 @@
 /* desktop */
 @media (min-width: 768px) {
   .background {
-    background-image: url("../../../../public/assets/images/pattern-bg-desktop.png");
+    background-image: url("../../../../public/assets/pattern-bg-desktop.png");
     background-repeat: no-repeat;
     width: 100%;
     background-size: cover;
