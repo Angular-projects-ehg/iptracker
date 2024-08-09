@@ -1,24 +1,31 @@
 <div class="ip-info-container">
 
+
   <div class="ip-info">
+
+    <div class="desktop-v-info">
       <h3 class="ip-info-title">IP ADDRESS</h3>
       <span class="ip-info-data">{{ipdata.ip}}</span>
-
+    </div>
+    <hr class="hr">
+    <div class="desktop-v-info">
       <h3 class="ip-info-title">LOCATION</h3>
-      <span class="ip-info-data"> {{ipdata.location.region}}  -  {{ipdata.location.country}}</span>
+      <span class="ip-info-data"> {{ipdata.location.region}}   {{ipdata.location.country}}  {{ipdata.location.postalCode}}</span>
+    </div>
+    <hr class="hr">
 
+    <div class="desktop-v-info">
       <h3 class="ip-info-title">TIME ZONE</h3>
       <span class="ip-info-data">{{ipdata.location.timezone}}</span>
+    </div>
+    <hr class="hr">
 
+    <div class="desktop-v-info">
       <h3 class="ip-info-title">ISP</h3>
       <span class="ip-info-data">{{ipdata.isp}}</span>
-
+    </div>
 
   </div>
-
-
-
-
 
 </div>
 

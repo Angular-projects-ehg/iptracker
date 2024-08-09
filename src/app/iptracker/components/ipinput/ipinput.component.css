@@ -35,3 +35,10 @@
  }
 
 
+
+ @media (min-width: 768px) {
+  .input-container .ip-input {
+    width: 30%;
+  }
+
+ }

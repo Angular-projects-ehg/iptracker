@@ -15,6 +15,7 @@ export interface As {
 }
 
 export interface Location {
+  postalCode: string;
   country:  string;
   region:   string;
   timezone: string;

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+
 import '../../../../../node_modules/leaflet/dist/leaflet'
 import { IPData } from '../../interfaces/ip.interfaces';
 
@@ -11,10 +12,14 @@ import { IPData } from '../../interfaces/ip.interfaces';
 })
 export class InfoComponent {
 
+
+
+
   @Input()
   public ipdata:IPData = {
     ip: '',
     location: {
+      postalCode:'',
       country: '',
       region: '',
       timezone: '',
@@ -31,4 +36,8 @@ export class InfoComponent {
     },
     isp: '',
   }
+
+
+
+
 }

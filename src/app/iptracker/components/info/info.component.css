@@ -12,7 +12,7 @@
   background-color: white;
   color: var(--VeryDarkGray);
   width: 320px;
-  height: 280px;
+  height: 320px;
   border-radius: 13px;
   border: 1px lightgray solid;
   display: flex;
@@ -38,3 +38,40 @@
 }
 
 
+
+
+
+/* desktop */
+@media (min-width: 768px) {
+
+  .ip-info-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7%;
+    justify-content: center;
+  }
+
+
+  .ip-info-container .ip-info {
+
+    width: 70%;
+    padding-left: 40px;
+    padding-right: 40px;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hr {
+    background-color:#dddddd;
+    -webkit-transform:rotate(90deg);
+    width:100px;
+    height:0.6px;
+    border:0.6px;
+  }
+
+}
