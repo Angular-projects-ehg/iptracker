@@ -2,7 +2,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { AfterViewInit, Injectable } from '@angular/core';
 import { IPData } from '../interfaces/ip.interfaces';
 import * as L from 'leaflet';
-import { delay } from 'rxjs';
+import { delay, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -40,8 +40,19 @@ export class TrackIpService {
 
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.loadLocalStorage();
+   }
 
+
+  saveOnLocalStorage() {
+    localStorage.setItem('ipaddress',JSON.stringify(this.ipData))
+  }
+
+  loadLocalStorage() {
+    if(!localStorage.getItem('ipaddress')) return;
+    this.ipData = JSON.parse(localStorage.getItem('ipaddress')!);
+  }
 
   public searchIp(ip: string): void {
 
@@ -56,11 +67,12 @@ export class TrackIpService {
 
     this.http.get<IPData>(`${this.API_URL}`, { params: params })
       .pipe(
-        delay(1000)
+        delay(1000),
       )
       .subscribe((resp) => {
 
         this.ipData = resp
+        this.saveOnLocalStorage()
         this.map = L.map('map', {
           center: [this.ipData.location.lat, this.ipData.location.lng],
           zoom: 13,
