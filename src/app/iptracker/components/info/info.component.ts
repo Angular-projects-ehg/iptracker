@@ -1,6 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
-import '../../../../../node_modules/leaflet/dist/leaflet'
+import '../../../../../node_modules/leaflet/dist/leaflet';
 import { IPData } from '../../interfaces/ip.interfaces';
 
 @Component({
@@ -8,23 +8,19 @@ import { IPData } from '../../interfaces/ip.interfaces';
   standalone: true,
   imports: [],
   templateUrl: './info.component.html',
-  styleUrl: './info.component.css'
+  styleUrl: './info.component.css',
 })
 export class InfoComponent {
-
-
-
-
   @Input()
-  public ipdata:IPData = {
+  public ipdata: IPData = {
     ip: '',
     location: {
-      postalCode:'',
+      postalCode: '',
       country: '',
       region: '',
       timezone: '',
-      lng:0,
-      lat:0
+      lng: 0,
+      lat: 0,
     },
     domains: [],
     as: {
@@ -35,9 +31,5 @@ export class InfoComponent {
       type: '',
     },
     isp: '',
-  }
-
-
-
-
+  };
 }

@@ -1,6 +1,6 @@
 <div class="input-container">
   <form class="form" (submit)="FormSubmit($event)">
-    <input placeholder="Search for any IP address or domain"  class="ip-input" type="text" #ipValueInput>
+    <input placeholder="Search for any IP address or domain" value={{ipdata.ip}}  class="ip-input" type="text" #ipValueInput>
     <button  type="submit" class="btn-search"
     ></button>
 

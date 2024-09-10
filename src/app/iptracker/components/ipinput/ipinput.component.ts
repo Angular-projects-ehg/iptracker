@@ -1,35 +1,57 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { TrackIpService } from '../../services/trackip.service';
+import { IPData } from '../../interfaces/ip.interfaces';
 
 @Component({
   selector: 'app-ipinput',
   standalone: true,
-  imports: [],
   templateUrl: './ipinput.component.html',
-  styleUrl: './ipinput.component.css'
+  styleUrls: ['./ipinput.component.css'],
 })
+export class IpInputComponent implements OnInit {
+  @ViewChild('ipValueInput')
+  public searchIp!: ElementRef<HTMLInputElement>;
 
-export class IpInputComponent {
+  public ipdata: IPData = {
+    ip: '',
+    location: {
+      postalCode: '',
+      country: '',
+      region: '',
+      timezone: '',
+      lng: 0,
+      lat: 0,
+    },
+    domains: [],
+    as: {
+      asn: 0,
+      name: '',
+      route: '',
+      domain: '',
+      type: '',
+    },
+    isp: '',
+  };
 
+  constructor(private trackIpService: TrackIpService) {}
 
-@ViewChild('ipValueInput')
-public searchIp!: ElementRef<HTMLInputElement>;
+  ngOnInit(): void {
+    this.trackIpService.getMyIpAndSearch().subscribe((data: IPData) => {
+      this.ipdata = data;
+      if (this.searchIp) {
+        this.searchIp.nativeElement.value = this.ipdata.ip;
+      }
+    });
+  }
 
-constructor(private trackIpService:TrackIpService) {}
+  FormSubmit(e: Event): void {
+    e.preventDefault();
+    const IP = this.searchIp.nativeElement.value;
 
- FormSubmit(e:Event) {
-  e.preventDefault();
-  const IP = this.searchIp.nativeElement.value;
+    this.trackIpService.searchIp(IP).subscribe((data) => {
+      this.ipdata = data;
+    });
 
-  this.trackIpService.searchIp(IP);
-
-  console.log('Searching ip: ' + IP);
-
+    console.log('Searching IP: ' + IP);
+  }
 }
-
-
-
-
-}
-
-
